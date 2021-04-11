@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31129.286
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mountains And Valleys", "Mountains And Valleys\Mountains And Valleys.csproj", "{4CC8BB02-5DD3-4365-92F8-8D54A9889B02}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4CC8BB02-5DD3-4365-92F8-8D54A9889B02}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4CC8BB02-5DD3-4365-92F8-8D54A9889B02}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4CC8BB02-5DD3-4365-92F8-8D54A9889B02}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4CC8BB02-5DD3-4365-92F8-8D54A9889B02}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {EE7EF00A-B5AF-4315-A650-EF000EDBB8E7}
+	EndGlobalSection
+EndGlobal
