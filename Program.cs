@@ -1,4 +1,5 @@
-﻿using System;
+using System;
+using System.Diagnostics;
 
 namespace Mountains_And_Valleys
 {
@@ -14,21 +15,35 @@ namespace Mountains_And_Valleys
         {
             takeUserInput();
 
-            userInput = userInput.ToUpper();
-
             startHike(userInput);
 
             //METHODS
-
+            
             static string takeUserInput()
             {
                 Console.WriteLine("Enter your path!\nU = One step down.\nD = One step up.\nF = One " +
                 "step forward.");
 
                 userInput = Console.ReadLine();
+                
+                userInput = userInput.ToUpper();
+
+                for (int i = 0; i < userInput.Length; i++)
+                {
+                    if (userInput[i] != 'U' && userInput[i] != 'D' && userInput[i] != 'F')
+                    {
+                        Console.WriteLine("You may only enter U, D, or F!");
+                        
+                        takeUserInput();
+                    }
+                    else
+                    {
+                        continue;
+                    }
+                }
 
                 return userInput;
-            }
+            } 
 
             void startHike(string userInput)
             {
@@ -49,18 +64,22 @@ namespace Mountains_And_Valleys
                     {
                         hikeData[0]++;
                     }
-                    else
+                    else if (userInput[i] == 'D')
                     {
                         hikeData[0]--;
+                    }
+                    else
+                    {
+                        continue;
                     }
                 }
             }
 
             static void countValleys(string userInput)
             {
-                for (int i = 0; i < userInput.Length; i++)
+                for (int i = 0; i < userInput.Length - 1; i++)
                 {
-                    if (userInput[i] == 'U' && userInput[i + 1] == 'D')
+                    if (userInput[i] == 'U' && userInput[i + 1] == 'D') //UFD COMBO NOT WORKING
                     {
                         hikeData[1]++;
                     }
@@ -77,7 +96,7 @@ namespace Mountains_And_Valleys
 
             static void writeHikeData(int[] hikeData)
             {
-                string[] responses = new string[] {"Your finished height is: ", "The number of" +
+                string[] responses = new string[] {"Your finished height is: ", "The number of " +
                     "valleys you walked: ", "Your total number of steps: "};
 
                 for (int i = 0; i < hikeData.Length; i++)
